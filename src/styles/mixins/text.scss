@@ -1,0 +1,43 @@
+@mixin text-common {
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin text-display {
+  @include text-common;
+  font-size: 34px;
+}
+
+@mixin text-headline {
+  @include text-common;
+  font-size: 24px;
+}
+
+@mixin text-title {
+  @include text-common;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+@mixin text-body {
+  @include text-common;
+  font-size: 16px;
+}
+
+@mixin text-button {
+  @include text-common;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@mixin text-caption {
+  @include text-common;
+  font-size: 14px;
+}
+
+@mixin text-nowrap {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
