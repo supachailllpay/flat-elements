@@ -52,6 +52,12 @@
   color: $color-divider !important;
 }
 
+/* cursors */
+
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
 /* flexs */
 
 .flex-container {
@@ -138,4 +144,10 @@
 .pull-left {
   padding-left: 0 !important;
   margin-left: 0 !important;
+}
+
+/* texts */
+
+.text-nowrap {
+  white-space: nowrap !important;
 }
