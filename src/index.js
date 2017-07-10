@@ -1,6 +1,10 @@
+import App from './components/app'
+
 const FlatElement = {
   install (Vue, options) {
-    [].forEach(component => {
+    [
+      App
+    ].forEach(component => {
       Vue.component(component.name, component)
     })
   }
