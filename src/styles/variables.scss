@@ -1,0 +1,30 @@
+/* breakpoints */
+
+$breakpoint-xsmall: 480px;
+$breakpoint-small: 600px;
+$breakpoint-medium: 840px;
+$breakpoint-large: 960px;
+$breakpoint-xlarge: 1280px;
+
+/* colors */
+
+$color-black: #000;
+$color-white: #fff;
+$color-primary: #3f51b5;
+$color-light-primary: #757ce8;
+$color-dark-primary: #002884;
+$color-accent: #ff4081;
+$color-primary-text: #212121;
+$color-secondary-text: #757575;
+$color-divider: #e0e0e0;
+$color-background: #fafafa;
+$color-darker: rgba(#000, 0.1);
+$color-lighter: rgba(#fff, 0.1);
+
+/* elevations */
+
+$elevation-appbar: 400;
+$elevation-snackbar: 600;
+$elevation-menu: 800;
+$elevation-drawer: 1600;
+$elevation-dialog: 2400;
