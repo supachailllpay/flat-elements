@@ -1,0 +1,24 @@
+.column {
+  display: block;
+  width: 100%;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.column--xs {
+  margin-left: 24px;
+}
+
+@media all and (min-width: $breakpoint-xsmall) {
+  .column--sm {
+    margin-left: 24px;
+  }
+}
+
+@media all and (min-width: $breakpoint-small) {
+  .column--md {
+    margin-left: 24px;
+  }
+}
