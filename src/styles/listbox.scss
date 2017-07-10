@@ -1,0 +1,11 @@
+.listbox {
+  @include text-nowrap;
+  @include transition-normal(background-color);
+  display: block;
+  padding: 16px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-darker;
+  }
+}
