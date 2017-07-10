@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+body {
+  @include text-body;
+  margin: 0;
+  color: $color-primary-text;
+  background-color: $color-background;
+  line-height: 1.5;
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1 {
+  @include text-display;
+  margin: 24px 0;
+}
+
+h2 {
+  @include text-headline;
+  margin: 24px 0;
+}
+
+h3 {
+  @include text-title;
+  margin: 24px 0;
+}
+
+h4 {
+  @include text-body;
+  margin: 24px 0;
+}
+
+p {
+  margin: 24px 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+}
+
+button,
+input,
+textarea {
+  border: none;
+  color: inherit;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid $color-divider;
+  margin: 0;
+}
+
+ul {
+  margin: 24px 0;
+  padding-left: 24px;
+}
