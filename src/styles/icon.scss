@@ -1,0 +1,7 @@
+.icon {
+  @include icon-material;
+  width: 24px;
+  color: $color-secondary-text;
+  text-align: center;
+  vertical-align: top;
+}
