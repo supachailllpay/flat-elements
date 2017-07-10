@@ -1,0 +1,141 @@
+/* aligns */
+
+.align-center {
+  text-align: center !important;
+}
+
+.align-left {
+  text-align: left !important;
+}
+
+.align-right {
+  text-align: right !important;
+}
+
+/* backgrounds */
+
+.background-white {
+  background-color: $color-white !important;
+}
+
+.background-primary {
+  background-color: $color-primary !important;
+}
+
+.background-accent {
+  background-color: $color-accent !important;
+}
+
+/* colors */
+
+.color-white {
+  color: $color-white !important;
+}
+
+.color-primary {
+  color: $color-primary !important;
+}
+
+.color-accent {
+  color: $color-accent !important;
+}
+
+.color-primary-text {
+  color: $color-primary-text !important;
+}
+
+.color-secondary-text {
+  color: $color-secondary-text !important;
+}
+
+.color-divider {
+  color: $color-divider !important;
+}
+
+/* flexs */
+
+.flex-container {
+  display: flex !important;
+}
+
+.flex-auto {
+  flex: 1 1 auto !important;
+}
+
+.flex-align-center {
+  align-items: center !important;
+}
+
+.flex-justify-center {
+  justify-content: center !important;
+}
+
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+
+/* hide-ons */
+
+@media all and (max-width: $breakpoint-xsmall) {
+  .hide-on-xsmall-and-lower {
+    display: none !important;
+  }
+}
+
+@media all and (max-width: $breakpoint-small) {
+  .hide-on-small-and-lower {
+    display: none !important;
+  }
+}
+
+@media all and (min-width: $breakpoint-xsmall) {
+  .hide-on-xsmall-and-upper {
+    display: none !important;
+  }
+}
+
+@media all and (min-width: $breakpoint-small) {
+  .hide-on-small-and-upper {
+    display: none !important;
+  }
+}
+
+/* places */
+
+.place-above {
+  margin-bottom: 24px !important;
+}
+
+.place-below {
+  margin-top: 24px !important;
+}
+
+.place-before {
+  margin-right: 24px !important;
+}
+
+.place-after {
+  margin-left: 24px !important;
+}
+
+/* pulls */
+
+.pull-top {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+.pull-right {
+  padding-right: 0 !important;
+  margin-right: 0 !important;
+}
+
+.pull-bottom {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.pull-left {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
