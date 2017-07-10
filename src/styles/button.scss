@@ -1,0 +1,28 @@
+.button {
+  @include text-button;
+  @include transition-normal(color, background-color);
+  display: inline-block;
+  padding: 0 16px;
+  color: $color-white;
+  background-color: $color-primary;
+  line-height: 40px;
+  border-radius: 3px;
+  cursor: pointer;
+  white-space: nowrap;
+
+  &[disabled] {
+    color: $color-secondary-text;
+    background-color: $color-divider;
+    cursor: default;
+  }
+}
+
+.button--flat {
+  @extend .button;
+  color: $color-primary;
+  background-color: transparent;
+
+  &[disabled] {
+    background-color: transparent;
+  }
+}
