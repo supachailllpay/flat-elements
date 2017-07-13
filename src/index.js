@@ -2,6 +2,7 @@ import App from './components/app'
 import Checkbox from './components/checkbox'
 import Dialog from './components/dialog'
 import Drawer from './components/drawer'
+import Dropdown from './components/dropdown'
 import Radio from './components/radio'
 import Select from './components/select'
 import Tab from './components/tab'
@@ -16,6 +17,7 @@ const FlatElement = {
       Checkbox,
       Dialog,
       Drawer,
+      Dropdown,
       Radio,
       Select,
       Tab,
