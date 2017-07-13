@@ -4,6 +4,7 @@ import Dialog from './components/dialog'
 import Drawer from './components/drawer'
 import Dropdown from './components/dropdown'
 import Radio from './components/radio'
+import Ripple from './components/ripple'
 import Select from './components/select'
 import Tab from './components/tab'
 import Tabs from './components/tabs'
@@ -19,6 +20,7 @@ const FlatElement = {
       Drawer,
       Dropdown,
       Radio,
+      Ripple,
       Select,
       Tab,
       Tabs,
