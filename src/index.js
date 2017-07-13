@@ -2,6 +2,8 @@ import App from './components/app'
 import Checkbox from './components/checkbox'
 import Radio from './components/radio'
 import Select from './components/select'
+import Tab from './components/tab'
+import Tabs from './components/tabs'
 import Textarea from './components/textarea'
 import Textfield from './components/textfield'
 
@@ -12,6 +14,8 @@ const FlatElement = {
       Checkbox,
       Radio,
       Select,
+      Tab,
+      Tabs,
       Textarea,
       Textfield
     ].forEach(component => {
