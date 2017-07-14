@@ -1,5 +1,6 @@
 import App from './components/app'
 import Checkbox from './components/checkbox'
+import Collapse from './components/collapse'
 import Dialog from './components/dialog'
 import Drawer from './components/drawer'
 import Dropdown from './components/dropdown'
@@ -18,6 +19,7 @@ const FlatElement = {
     [
       App,
       Checkbox,
+      Collapse,
       Dialog,
       Drawer,
       Dropdown,
