@@ -2,7 +2,7 @@
   .toolbar {
     display: flex;
     align-items: center;
-    padding: 16px 24px;
+    padding: 16px;
   }
 
   .gap {

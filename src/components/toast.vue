@@ -10,7 +10,7 @@
     z-index: $elevation-snackbar;
     display: flex;
     max-width: 320px;
-    padding: 16px 24px;
+    padding: 16px;
     color: $color-white;
     background-color: rgba($color-black, 0.9);
     transform: translateY(100%);
