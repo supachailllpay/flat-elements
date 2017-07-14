@@ -20,7 +20,7 @@
   .caret {
     @include icon-material;
     position: absolute;
-    top: 20px;
+    top: 24px;
     right: 0;
     color: $color-secondary-text;
     pointer-events: none;
