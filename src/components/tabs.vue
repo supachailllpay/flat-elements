@@ -1,7 +1,6 @@
 <style lang='scss' scoped>
   .tabs {
     position: relative;
-    overflow: hidden;
   }
 </style>
 
