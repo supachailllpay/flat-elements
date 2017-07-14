@@ -10,6 +10,7 @@ import Tab from './components/tab'
 import Tabs from './components/tabs'
 import Textarea from './components/textarea'
 import Textfield from './components/textfield'
+import Toast from './components/toast'
 
 const FlatElement = {
   install (Vue, options) {
@@ -25,7 +26,8 @@ const FlatElement = {
       Tab,
       Tabs,
       Textarea,
-      Textfield
+      Textfield,
+      Toast
     ].forEach(component => {
       Vue.component(component.name, component)
     })
