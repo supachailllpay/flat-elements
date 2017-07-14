@@ -17,21 +17,8 @@ import Toolbar from './components/toolbar'
 const FlatElement = {
   install (Vue, options) {
     [
-      App,
-      Checkbox,
-      Collapse,
-      Dialog,
-      Drawer,
-      Dropdown,
-      Radio,
-      Ripple,
-      Select,
-      Tab,
-      Tabs,
-      Textarea,
-      Textfield,
-      Toast,
-      Toolbar
+      App, Checkbox, Collapse, Dialog, Drawer, Dropdown, Radio, Ripple, Select,
+      Tab, Tabs, Textarea, Textfield, Toast, Toolbar
     ].forEach(component => {
       Vue.component(component.name, component)
     })
