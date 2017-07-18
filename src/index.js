@@ -1,6 +1,7 @@
 import App from './components/app'
 import Checkbox from './components/checkbox'
 import Collapse from './components/collapse'
+import Datepicker from './components/datepicker'
 import Dialog from './components/dialog'
 import Drawer from './components/drawer'
 import Dropdown from './components/dropdown'
@@ -17,8 +18,8 @@ import Toolbar from './components/toolbar'
 const FlatElement = {
   install (Vue, options) {
     [
-      App, Checkbox, Collapse, Dialog, Drawer, Dropdown, Radio, Ripple, Select,
-      Tab, Tabs, Textarea, Textfield, Toast, Toolbar
+      App, Checkbox, Collapse, Datepicker, Dialog, Drawer, Dropdown, Radio,
+      Ripple, Select, Tab, Tabs, Textarea, Textfield, Toast, Toolbar
     ].forEach(component => {
       Vue.component(component.name, component)
     })
