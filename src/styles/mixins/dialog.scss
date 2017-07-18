@@ -1,4 +1,18 @@
-@mixin backdrop-dialog {
+@mixin dialog-content {
+  @include transition-normal(transform);
+  position: fixed;
+  background-color: $color-white;
+  border-radius: 3px;
+  overflow-y: auto;
+  pointer-events: none;
+  will-change: transform;
+
+  &.visible {
+    pointer-events: all;
+  }
+}
+
+@mixin dialog-backdrop {
   @include transition-normal(opacity);
   position: fixed;
   top: 0;
