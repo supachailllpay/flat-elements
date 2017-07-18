@@ -15,7 +15,7 @@ import Textfield from './components/textfield'
 import Toast from './components/toast'
 import Toolbar from './components/toolbar'
 
-const FlatElement = {
+export default {
   install (Vue, options) {
     [
       App, Checkbox, Collapse, Datepicker, Dialog, Drawer, Dropdown, Radio,
@@ -25,5 +25,3 @@ const FlatElement = {
     })
   }
 }
-
-export default FlatElement

@@ -6,7 +6,7 @@ module.exports = {
     path: resolve('dist'),
     publicPath: '/',
     filename: 'index.js',
-    library: 'FlatElement',
+    library: 'FlatElements',
     libraryTarget: 'umd'
   },
 

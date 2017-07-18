@@ -1,7 +1,7 @@
 import Vue from 'vue'
-import FlatElement from './index'
+import FlatElements from './index'
 
-Vue.use(FlatElement)
+Vue.use(FlatElements)
 
 export default new Vue({
   el: '#app'
