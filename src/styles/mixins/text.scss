@@ -3,6 +3,14 @@
   -webkit-font-smoothing: antialiased;
 }
 
+@mixin text-regular {
+  font-weight: 400;
+}
+
+@mixin text-medium {
+  font-weight: 600;
+}
+
 @mixin text-display {
   font-size: 34px;
 }
