@@ -1,6 +1,7 @@
 <style lang='scss' scoped>
   @import '~@/styles/variables';
   @import '~@/styles/mixins';
+  @import '~@/styles/mixins/textfield';
 
   .textarea {
     position: relative;
@@ -8,13 +9,13 @@
   }
 
   .area {
-    @include input-textfield;
+    @include textfield-input;
     height: auto;
     resize: vertical;
   }
 
   .label {
-    @include label-textfield;
+    @include textfield-label;
   }
 </style>
 

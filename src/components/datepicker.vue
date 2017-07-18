@@ -1,6 +1,8 @@
 <style lang='scss' scoped>
   @import '~@/styles/variables';
   @import '~@/styles/mixins';
+  @import '~@/styles/mixins/dropdown';
+  @import '~@/styles/mixins/textfield';
 
   .datepicker {
     position: relative;
@@ -8,45 +10,23 @@
   }
 
   .input {
-    @include input-textfield;
+    @include textfield-input;
     padding-right: 24px;
     cursor: pointer;
   }
 
   .label {
-    @include label-textfield;
+    @include textfield-label;
   }
 
   .caret {
-    @include icon-material;
-    position: absolute;
-    top: 24px;
-    right: 0;
-    color: $color-secondary-text;
-    pointer-events: none;
+    @include textfield-caret;
   }
 
   .content {
-    @include transition-normal(transform);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: $elevation-menu;
-    display: block;
+    @include dropdown-content;
     padding: 16px;
     margin: 24px 0;
-    background-color: $color-white;
-    transform: scale(0);
-    transform-origin: top left;
-    border-radius: 3px;
-    box-shadow: 0 1px 1px 0 $color-darker;
-    pointer-events: none;
-    will-change: transform;
-
-    &.visible {
-      transform: scale(1);
-      pointer-events: all;
-    }
   }
 
   .control {

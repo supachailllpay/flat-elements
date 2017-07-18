@@ -1,29 +1,24 @@
 <style lang='scss' scoped>
   @import '~@/styles/variables';
   @import '~@/styles/mixins';
+  @import '~@/styles/mixins/dialog';
 
   .content {
-    @include transition-normal(transform);
-    position: fixed;
+    @include dialog-content;
     top: 0;
     bottom: 0;
     left: 0;
     z-index: $elevation-drawer;
     width: 240px;
-    background-color: $color-white;
     transform: translateX(-100%);
-    overflow-y: auto;
-    pointer-events: none;
-    will-change: transform;
 
     &.visible {
       transform: translateX(0);
-      pointer-events: all;
     }
   }
 
   .backdrop {
-    @include backdrop-dialog;
+    @include dialog-backdrop;
     z-index: $elevation-drawer - 1;
   }
 </style>

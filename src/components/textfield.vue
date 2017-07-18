@@ -1,6 +1,7 @@
 <style lang='scss' scoped>
   @import '~@/styles/variables';
   @import '~@/styles/mixins';
+  @import '~@/styles/mixins/textfield';
 
   .textfield {
     position: relative;
@@ -8,11 +9,11 @@
   }
 
   .input {
-    @include input-textfield;
+    @include textfield-input;
   }
 
   .label {
-    @include label-textfield;
+    @include textfield-label;
   }
 </style>
 

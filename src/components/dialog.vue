@@ -1,10 +1,10 @@
 <style lang='scss' scoped>
   @import '~@/styles/variables';
   @import '~@/styles/mixins';
+  @import '~@/styles/mixins/dialog';
 
   .content {
-    @include transition-normal(transform);
-    position: fixed;
+    @include dialog-content;
     top: 20%;
     right: 0;
     left: 0;
@@ -12,21 +12,16 @@
     max-width: 600px;
     max-height: 60%;
     margin: auto;
-    background-color: $color-white;
     transform: scale(0);
-    border-radius: 3px;
-    overflow-y: auto;
-    pointer-events: none;
-    will-change: transform;
 
     &.visible {
       transform: scale(1);
-      pointer-events: all;
     }
   }
 
   .backdrop {
-    @include backdrop-dialog;
+    @include dialog-backdrop;
+    z-index: $elevation-dialog - 1;
   }
 </style>
 
