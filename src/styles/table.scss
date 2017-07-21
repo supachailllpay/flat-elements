@@ -1,0 +1,27 @@
+.table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+.table thead {
+  border-bottom: 1px solid $color-divider;
+  color: $color-secondary-text;
+}
+
+.table tr {
+  border-bottom: 1px solid $color-divider;
+
+  &:last-of-type {
+    border-bottom: 0;
+  }
+}
+
+.table th {
+  padding: 16px 8px;
+  white-space: nowrap;
+}
+
+.table td {
+  padding: 16px 8px;
+}
