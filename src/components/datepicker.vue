@@ -1,6 +1,7 @@
 <style lang='scss' scoped>
   @import '~@/styles/variables';
   @import '~@/styles/mixins';
+  @import '~@/styles/mixins/calendar';
   @import '~@/styles/mixins/dropdown';
   @import '~@/styles/mixins/textfield';
 
@@ -50,52 +51,19 @@
   }
 
   .calendar {
-    @include text-caption;
-    width: 280px;
-    min-height: 210px;
-    text-align: center;
-    border-collapse: collapse;
+    @include calendar-table;
   }
 
   .calendar th {
-    width: 40px;
-    height: 40px;
-    padding: 0;
-    color: $color-secondary-text;
+    @include calendar-th;
   }
 
   .calendar td {
-    @include transition-normal(background-color);
-    height: 40px;
-    padding: 0;
-    border-radius: 3px;
-    cursor: pointer;
-
-    &:hover {
-      background-color: $color-darker;
-    }
-
-    &.today {
-      color: $color-primary;
-    }
-
-    &.selected {
-      color: $color-white;
-      background-color: $color-primary;
-    }
-
-    &.disabled {
-      visibility: hidden;
-    }
+    @include calendar-td;
   }
 
   .backdrop {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: $elevation-menu - 1;
+    @include dropdown-backdrop;
   }
 </style>
 

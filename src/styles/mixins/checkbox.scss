@@ -1,0 +1,11 @@
+@mixin checkbox-icon($unchecked, $checked) {
+  @include icon-material;
+  color: $color-secondary-text;
+  content: $unchecked;
+  vertical-align: top;
+
+  :checked + & {
+    color: $color-primary;
+    content: $checked;
+  }
+}

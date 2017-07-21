@@ -1,6 +1,7 @@
 <style lang='scss' scoped>
   @import '~@/styles/variables';
   @import '~@/styles/mixins';
+  @import '~@/styles/mixins/checkbox';
 
   .checkbox {
     cursor: pointer;
@@ -12,15 +13,9 @@
   }
 
   .icon::after {
-    @include icon-material;
-    color: $color-secondary-text;
-    content: 'check_box_outline_blank';
-    vertical-align: top;
-
-    :checked + & {
-      color: $color-primary;
-      content: 'check_box';
-    }
+    $unchecked: 'check_box_outline_blank';
+    $checked: 'check_box';
+    @include checkbox-icon($unchecked, $checked);
   }
 
   .label {

@@ -8,7 +8,7 @@
   transform-origin: top left;
   border-radius: 3px;
   box-shadow: 0 1px 1px 0 $color-darker;
-  overflow: hidden;
+  overflow-y: auto;
   pointer-events: none;
   will-change: transform;
 

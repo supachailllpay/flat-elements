@@ -30,7 +30,6 @@
     padding: 0;
     margin: 24px 0;
     list-style: none;
-    overflow-y: auto;
   }
 
   .item {

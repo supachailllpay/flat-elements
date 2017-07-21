@@ -1,6 +1,7 @@
 <style lang='scss' scoped>
   @import '~@/styles/variables';
   @import '~@/styles/mixins';
+  @import '~@/styles/mixins/checkbox';
 
   .radio {
     cursor: pointer;
@@ -12,15 +13,9 @@
   }
 
   .icon::after {
-    @include icon-material;
-    color: $color-secondary-text;
-    content: 'radio_button_unchecked';
-    vertical-align: top;
-
-    :checked + & {
-      color: $color-primary;
-      content: 'radio_button_checked';
-    }
+    $unchecked: 'radio_button_unchecked';
+    $checked: 'radio_button_checked';
+    @include checkbox-icon($unchecked, $checked);
   }
 
   .label {

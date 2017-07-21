@@ -1,3 +1,69 @@
-@import 'mixins/icon';
-@import 'mixins/text';
-@import 'mixins/transition';
+/* icons */
+
+@mixin icon-material {
+  font-family: 'Material Icons';
+  font-feature-settings: 'liga';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: 1;
+  text-transform: none;
+  white-space: nowrap;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* texts */
+
+@mixin text-base {
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin text-regular {
+  font-weight: 400;
+}
+
+@mixin text-medium {
+  font-weight: 600;
+}
+
+@mixin text-display {
+  font-size: 34px;
+}
+
+@mixin text-headline {
+  font-size: 24px;
+}
+
+@mixin text-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+@mixin text-body {
+  font-size: 16px;
+}
+
+@mixin text-button {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@mixin text-caption {
+  font-size: 14px;
+}
+
+@mixin text-nowrap {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* transitions */
+
+@mixin transition-normal($properties...) {
+  transition-duration: 0.2s;
+  transition-property: $properties;
+}
