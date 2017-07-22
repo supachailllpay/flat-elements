@@ -1,9 +1,8 @@
 const path = require('path')
-const resolve = (paths) => path.resolve(__dirname, paths)
 
 module.exports = {
   output: {
-    path: resolve('dist'),
+    path: path.resolve('dist'),
     publicPath: '/',
     filename: 'index.js',
     library: 'FlatElements',
@@ -36,7 +35,7 @@ module.exports = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      '@': resolve('src')
+      '@': path.resolve('src')
     }
   },
 
