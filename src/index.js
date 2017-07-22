@@ -17,10 +17,11 @@ import Toolbar from './components/toolbar'
 
 export default {
   install (Vue, options) {
-    [
+    let components = [
       App, Checkbox, Collapse, Datepicker, Dialog, Drawer, Dropdown, Radio,
       Ripple, Select, Tab, Tabs, Textarea, Textfield, Toast, Toolbar
-    ].forEach(component => {
+    ]
+    components.forEach(component => {
       Vue.component(component.name, component)
     })
   }
