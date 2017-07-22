@@ -1,20 +1,16 @@
 .row {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
 }
 
-.row--xs {
-  flex-wrap: nowrap;
-}
-
-@media all and (min-width: $breakpoint-xsmall) {
-  .row--sm {
-    flex-wrap: nowrap;
+@media (max-width: $breakpoint-small) {
+  .row--upper-small {
+    flex-wrap: wrap;
   }
 }
 
-@media all and (min-width: $breakpoint-small) {
-  .row--md {
-    flex-wrap: nowrap;
+@media (max-width: $breakpoint-xsmall) {
+  .row--upper-xsmall {
+    flex-wrap: wrap;
   }
 }

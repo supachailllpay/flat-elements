@@ -1,24 +1,46 @@
 .column {
-  display: block;
   width: 100%;
+  margin-left:  24px;
 
   &:first-child {
     margin-left: 0;
   }
 }
 
-.column--xs {
-  margin-left: 24px;
+.column--three-quarters {
+  width: percentage(3 / 4);
 }
 
-@media all and (min-width: $breakpoint-xsmall) {
-  .column--sm {
-    margin-left: 24px;
+.column--two-thirds {
+  width: percentage(2 / 3);
+}
+
+.column--half {
+  width: percentage(1 / 2);
+}
+
+.column--one-third {
+  width: percentage(1 / 3);
+}
+
+.column--one-quarter {
+  width: percentage(1 / 4);
+}
+
+@media (max-width: $breakpoint-small) {
+  .column {
+    .row--upper-small > & {
+      width: 100%;
+      margin-left: 0;
+    }
   }
 }
 
-@media all and (min-width: $breakpoint-small) {
-  .column--md {
-    margin-left: 24px;
+@media (max-width: $breakpoint-xsmall) {
+  .column {
+    .row--upper-xsmall > & {
+      width: 100%;
+      margin-left: 0;
+    }
   }
 }
