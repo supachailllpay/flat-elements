@@ -9,7 +9,7 @@ const months = [
 
 class CustomDate {
   constructor (date) {
-    this.date = new Date(date)
+    this.date = Date.parse(date) ? new Date(date) : new Date()
     this.date.setHours(0, 0, 0, 0)
   }
 
