@@ -35,7 +35,7 @@
     cursor: pointer;
   }
 
-  @media all and (max-width: $breakpoint-xsmall) {
+  @media (max-width: $breakpoint-xsmall) {
     .toast {
       right: 24px;
       max-width: none;
