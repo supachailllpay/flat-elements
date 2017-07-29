@@ -37,7 +37,7 @@
 
     props: {
       label: String,
-      value: [String],
+      value: String,
       attributes: Object
     },
 
