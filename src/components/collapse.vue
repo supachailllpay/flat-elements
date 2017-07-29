@@ -59,7 +59,7 @@
       }
     },
 
-    mounted () {
+    created () {
       this.visible = !this.collapsed
     }
   }
