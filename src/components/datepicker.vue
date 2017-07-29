@@ -7,7 +7,7 @@
 
   .datepicker {
     position: relative;
-    padding: 24px 0;
+    padding-top: 24px;
   }
 
   .input {
