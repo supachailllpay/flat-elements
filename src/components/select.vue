@@ -52,8 +52,8 @@
       :placeholder='label'
       :value='text'
       v-bind='attributes'
-      @focus='toggle(true)'
-      @blur='toggle(false)'>
+      @focus='toggle()'
+      @blur='toggle()'>
     <label class='label'>{{ label }}</label>
     <div class='caret'>arrow_drop_down</div>
     <ul class='menu' :class='{ visible }'>
@@ -90,8 +90,8 @@
     },
 
     methods: {
-      toggle (visible) {
-        this.visible = visible
+      toggle () {
+        this.visible = !this.visible
       },
 
       select (option) {
