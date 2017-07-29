@@ -15,7 +15,21 @@
     name: 'element-tabs',
 
     props: {
-      tab: String
+      selected: String
+    },
+
+    data: () => ({
+      tab: ''
+    }),
+
+    methods: {
+      select (name) {
+        this.tab = name
+      }
+    },
+
+    created () {
+      this.tab = this.selected
     }
   }
 </script>
