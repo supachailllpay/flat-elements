@@ -33,6 +33,18 @@ class CustomDate {
     this.date.setFullYear(this.date.getFullYear() + delta)
   }
 
+  getDate () {
+    return this.date.getDate()
+  }
+
+  getMonth () {
+    return this.date.getMonth()
+  }
+
+  getYear () {
+    return this.date.getFullYear()
+  }
+
   isEqual (value) {
     if (Date.parse(value)) {
       return new Date(value).toDateString() === this.date.toDateString()
@@ -41,14 +53,6 @@ class CustomDate {
 
   toDateString () {
     return this.date.toDateString()
-  }
-
-  toDateObject () {
-    return {
-      year: this.date.getFullYear(),
-      month: this.date.getMonth(),
-      date: this.date.getDate()
-    }
   }
 
   toCustomDate () {

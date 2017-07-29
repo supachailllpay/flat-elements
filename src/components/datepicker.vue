@@ -79,8 +79,8 @@
     <div class='content' :class='{ visible }'>
       <div class='control'>
         <div class='next' @click='next(-1)'>chevron_left</div>
-        <span class='title' @click='layer = "months"'>{{ months[cursor.month] }}</span>
-        <span class='title' @click='layer = "years"'>{{ cursor.year }}</span>
+        <span class='title' @click='layer = "months"'>{{ months[month] }}</span>
+        <span class='title' @click='layer = "years"'>{{ year }}</span>
         <div class='next' @click='next(1)'>chevron_right</div>
       </div>
       <table class='calendar'>
@@ -110,29 +110,28 @@
     },
 
     data: () => ({
-      cursor: {},
       layer: '',
+      year: '',
+      month: '',
       visible: false
     }),
 
     computed: {
       text () {
         if (Date.parse(this.value)) {
-          let str = new Date(this.value).toDateString().split(' ')
-          return `${str[2]} ${str[1]} ${str[3]}`
+          let str = new Date(this.value).toDateString()
+          return str.replace(/(\w+) (\w+) (\d+) (\d+)/i, '$3 $2 $4')
         }
       },
 
       table () {
-        let year = this.cursor.year
-        let month = this.cursor.month
         switch (this.layer) {
           case 'days':
-            return calendar.getDates(year, month)
+            return calendar.getDates(this.year, this.month)
           case 'months':
             return calendar.getMonths(this.months)
           case 'years':
-            return calendar.getYears(year)
+            return calendar.getYears(this.year)
         }
       }
     },
@@ -150,7 +149,8 @@
             this.date.moveYear(direction * 10)
             break
         }
-        this.cursor = this.date.toDateObject()
+        this.year = this.date.getYear()
+        this.month = this.date.getMonth()
       },
 
       select (value) {
@@ -169,7 +169,8 @@
             this.layer = 'months'
             break
         }
-        this.cursor = this.date.toDateObject()
+        this.year = this.date.getYear()
+        this.month = this.date.getMonth()
       },
 
       compute (value) {
@@ -199,8 +200,9 @@
         if (this.visible) {
           let date = Date.parse(this.value) ? this.value : new Date()
           this.date = new datepicker.CustomDate(date)
-          this.cursor = this.date.toDateObject()
           this.layer = 'days'
+          this.year = this.date.getYear()
+          this.month = this.date.getMonth()
         }
       }
     },
