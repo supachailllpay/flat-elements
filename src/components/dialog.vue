@@ -7,8 +7,8 @@
     @include transition-normal(transform);
     position: fixed;
     top: 20%;
-    right: 0;
-    left: 0;
+    right: 24px;
+    left: 24px;
     z-index: $elevation-dialog;
     max-width: 600px;
     max-height: 60%;
