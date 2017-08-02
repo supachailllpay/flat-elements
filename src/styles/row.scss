@@ -1,6 +1,11 @@
 .row {
   display: flex;
   flex-flow: row nowrap;
+  margin-top:  24px;
+
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
 @media (max-width: $breakpoint-small) {
