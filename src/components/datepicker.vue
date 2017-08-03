@@ -27,7 +27,6 @@
   .content {
     @include dropdown-content;
     padding: 16px;
-    margin: 24px 0;
   }
 
   .control {

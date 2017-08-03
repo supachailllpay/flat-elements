@@ -28,7 +28,6 @@
     display: block;
     max-height: 308px;
     padding: 0;
-    margin: 24px 0;
     list-style: none;
   }
 
