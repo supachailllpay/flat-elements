@@ -1,21 +1,13 @@
 <style lang='scss' scoped>
-  @import '~@/styles/mixins';
-
   .toggle {
     cursor: pointer;
   }
 
   .content {
-    @include transition-normal(height);
-    height: 0;
-    overflow: hidden;
-    pointer-events: none;
-    will-change: height;
+    display: none;
 
     &.visible {
-      height: auto;
-      overflow: auto;
-      pointer-events: all;
+      display: block;
     }
   }
 </style>
@@ -32,6 +24,8 @@
 </template>
 
 <script>
+  import animations from '@/utils/animations'
+
   export default {
     name: 'element-collapse',
 
@@ -44,18 +38,12 @@
     }),
 
     methods: {
-      updateHeight (delay) {
-        let content = this.$refs.content
-        let height = content.scrollHeight
-        content.style.height = height + 'px'
-        setTimeout(() => {
-          content.style.height = ''
-        }, delay)
-      },
-
       toggle () {
         this.visible = !this.visible
-        this.updateHeight(this.visible ? 250 : 100)
+        animations.expand(this.$refs.content, {
+          style: { display: 'block', overflow: 'hidden' },
+          reversed: !this.visible
+        })
       }
     },
 

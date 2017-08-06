@@ -1,31 +1,24 @@
 <style lang='scss' scoped>
-  @import '~@/styles/mixins';
-
   .tab {
-    @include transition-normal(transform, opacity);
     position: absolute;
-    top: 0;
-    transform: translateY(24px);
-    opacity: 0;
-    pointer-events: none;
-    will-change: transform;
+    display: none;
 
     &.visible {
-      position: relative;
-      transform: translateY(0);
-      opacity: 1;
-      pointer-events: all;
+      position: static;
+      display: block;
     }
   }
 </style>
 
 <template>
-  <div class='tab' :class='{ visible }'>
+  <div class='tab' :class='{ visible }' ref='tab'>
     <slot></slot>
   </div>
 </template>
 
 <script>
+  import animations from '@/utils/animations'
+
   export default {
     name: 'element-tab',
 
@@ -36,6 +29,15 @@
     computed: {
       visible () {
         return this.name === this.$parent.tab
+      }
+    },
+
+    watch: {
+      visible () {
+        animations.fadeInUp(this.$refs.tab, {
+          style: { display: 'block' },
+          reversed: !this.visible
+        })
       }
     }
   }
