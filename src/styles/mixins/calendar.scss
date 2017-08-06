@@ -25,7 +25,8 @@
   }
 
   &.today {
-    color: $color-primary;
+    @include text-medium;
+    color: $color-accent;
   }
 
   &.selected {
