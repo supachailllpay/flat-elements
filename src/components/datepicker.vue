@@ -197,8 +197,7 @@
       toggle () {
         this.visible = !this.visible
         if (this.visible) {
-          let date = Date.parse(this.value) ? this.value : new Date()
-          this.date = new datepicker.CustomDate(date)
+          this.date = new datepicker.CustomDate(this.value)
           this.layer = 'days'
           this.year = this.date.getYear()
           this.month = this.date.getMonth()
