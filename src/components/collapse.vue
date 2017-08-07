@@ -1,13 +1,19 @@
 <style lang='scss' scoped>
+  @import '~@/styles/mixins';
+
   .toggle {
     cursor: pointer;
   }
 
   .content {
-    display: none;
+    @include transition-normal(height);
+    pointer-events: all;
+    will-change: height;
 
-    &.visible {
-      display: block;
+    &.hidden {
+      height: 0;
+      overflow: hidden;
+      pointer-events: none;
     }
   }
 </style>
@@ -17,15 +23,13 @@
     <div class='toggle' @click='toggle'>
       <slot name='toggle'></slot>
     </div>
-    <div class='content' :class='{ visible }' ref='content'>
+    <div class='content' :class='{ hidden }' ref='content'>
       <slot name='content'></slot>
     </div>
   </div>
 </template>
 
 <script>
-  import animations from '@/utils/animations'
-
   export default {
     name: 'element-collapse',
 
@@ -34,21 +38,29 @@
     },
 
     data: () => ({
-      visible: true
+      hidden: false
     }),
 
     methods: {
+      toggleStyle (duration) {
+        let content = this.$refs.content
+        let height = content.scrollHeight
+        content.style.height = height + 'px'
+        content.style.overflow = 'hidden'
+        setTimeout(() => {
+          content.style.height = ''
+          content.style.overflow = ''
+        }, duration)
+      },
+
       toggle () {
-        this.visible = !this.visible
-        animations.expand(this.$refs.content, {
-          style: { display: 'block', overflow: 'hidden' },
-          reversed: !this.visible
-        })
+        this.hidden = !this.hidden
+        this.toggleStyle(this.hidden ? 50 : 200)
       }
     },
 
     created () {
-      this.visible = !this.collapsed
+      this.hidden = this.collapsed
     }
   }
 </script>
