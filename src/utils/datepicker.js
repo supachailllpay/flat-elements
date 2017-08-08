@@ -46,9 +46,8 @@ class CustomDate {
   }
 
   isEqual (value) {
-    if (Date.parse(value)) {
-      return new Date(value).toDateString() === this.date.toDateString()
-    }
+    if (!Date.parse(value)) return false
+    return new Date(value).toDateString() === this.date.toDateString()
   }
 
   toDateString () {
