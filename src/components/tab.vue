@@ -18,7 +18,7 @@
 </style>
 
 <template>
-  <div class='tab' :class='{ hidden }' ref='tab'>
+  <div class='tab' :class='{ hidden }'>
     <slot></slot>
   </div>
 </template>
