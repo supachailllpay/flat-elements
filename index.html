@@ -50,6 +50,14 @@
         margin-top: 24px;
       }
 
+      .spinner {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+
       @media (max-width: 600px) {
         .container {
           grid-template-columns: 100%;
@@ -195,6 +203,10 @@
             </element-tab>
           </element-tabs>
         </main>
+      </div>
+
+      <div class='spinner'>
+        <element-spinner ref='spinner'></element-spinner>
       </div>
 
       <element-toast :duration='5000' ref='toast'></element-toast>

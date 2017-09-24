@@ -22,12 +22,13 @@
     methods: {
       submit (event) {
         event.preventDefault()
+        let toast = this.$refs.toast
         let form = window.localStorage.getItem('form')
         window.localStorage.setItem('form', JSON.stringify(this.form))
-        this.$refs.toast.show('Profile updated', 'Undo', () => {
+        toast.show('Profile updated', 'Undo', () => {
           window.localStorage.setItem('form', form)
           setTimeout(() => {
-            this.$refs.toast.show('Update profile be undone')
+            toast.show('Update profile be undone')
           })
         })
       }
@@ -87,6 +88,12 @@
         email: 'cmabbott9@archive.org',
         age: '55'
       }]
+    },
+
+    mounted () {
+      let spinner = this.$refs.spinner
+      spinner.toggle()
+      setTimeout(spinner.toggle, 2000)
     }
   })
 }())
